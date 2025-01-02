@@ -4,7 +4,7 @@
 #Importar la libreria pygame
 import pygame
 from funcionalidades import configuraciones
-from personajes import nave
+from personajes import nave, alien
 from funcionalidades import funcionesJuego as fj
 
 #Etapa 1 - Creación de la nave, se podrá mover derecha/izquierda y también debéra poder disparar
@@ -21,13 +21,16 @@ def iniciarJuego():
   #Crea la nave
   naveP = nave.Nave(pantalla, confi)
 
+  #Crea el alien
+  alienP = alien.Alien(pantalla,confi)
+
   #bucle principal de animación del juego
   while True:
     #Escuchar las entradas por teclado/mouse
     fj.verificarEventos(naveP)
     naveP.upNave()
     #Actualizar pantalla
-    fj.actualizarPantalla(confi,pantalla,naveP)
+    fj.actualizarPantalla(confi,pantalla,naveP,alienP)
 
 
 

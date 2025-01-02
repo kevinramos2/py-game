@@ -29,10 +29,11 @@ def verificarEventosKeyU(event,nave):
       nave.movimientoIzquierda = False
 
 #actualiza las imagenes en pantalla
-def actualizarPantalla(confi,pantalla,nave):
+def actualizarPantalla(confi,pantalla,nave,alien):
        #Setteamos el color de fondo
     pantalla.fill(confi.color)
     #Hacemos aparecer la nave
     nave.mostrarNave()
+    alien.mostrarAlien()
     #Hacer visible la pantalla más reciente
     pygame.display.flip()
