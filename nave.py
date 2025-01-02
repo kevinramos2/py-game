@@ -15,6 +15,28 @@ class Nave():
     self.rect.centerx = self.pantallaRect.centerx
     self.rect.bottom = self.pantallaRect.bottom
 
+    #Banderas de movimiento
+    self.movimientoDerecha = False
+    self.movimientoIzquierda = False
+    self.movimientoArriba = False
+    self.movimientoAbajo = False
+
+  
+
+  #Actualiza la posición de la nave
+  def upNave(self):
+    if self.movimientoDerecha:
+      self.rect.centerx += 1
+
+    if self.movimientoIzquierda:
+      self.rect.centerx -= 1
+
+    if self.movimientoArriba:
+      self.rect.bottomleft += 1
+
+    if self.movimientoAbajo:
+      self.rect.bottomleft -= 1
+
   #Dibuja la nave en la ubicación actual
   def mostrarNave(self):
     self.pantalla.blit(self.imagen,self.rect)

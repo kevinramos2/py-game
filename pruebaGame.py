@@ -24,13 +24,11 @@ def iniciarJuego():
   #bucle principal de animación del juego
   while True:
     #Escuchar las entradas por teclado/mouse
-    fj.verificarEventos()
-    #Setteamos el color de fondo
-    pantalla.fill(confi.color)
-    #Hacemos aparecer la nave
-    nave.mostrarNave()
-    #Hacer visible la pantalla más reciente
-    pygame.display.flip()
+    fj.verificarEventos(nave)
+    nave.upNave()
+    #Actualizar pantalla
+    fj.actualizarPantalla(confi,pantalla,nave)
+
 
 
 
