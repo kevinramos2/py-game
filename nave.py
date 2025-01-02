@@ -6,7 +6,7 @@ class Nave():
     self.pantalla = pantalla
     
     #Cargar la imagen de la nave
-    self.imagen = pygame.image.load("/img/space-ship-148536_640.bmp")
+    self.imagen = pygame.image.load("img/space-ship-148536_640.bmp")
     #rectangulo de la imagen "rect"
     self.rect = self.imagen.get_rect()
     self.pantallaRect = pantalla.get_rect()

@@ -5,6 +5,7 @@
 import pygame
 import sys 
 from configuraciones import Configuraciones
+from nave import Nave
 
 #Etapa 1 - Creación de la nave, se podrá mover derecha/izquierda y también debéra poder disparar
 
@@ -17,17 +18,19 @@ def iniciarJuego():
   pantalla = pygame.display.set_mode((confi.screenWidth,confi.screenHeight))
   pygame.display.set_caption("Invasión alienígena")
 
+  #Crea la nave
+  nave = Nave(pantalla)
+
+
   #bucle principal de animación del juego
   while True:
-    #Sirve para controlar las entradas por teclado o mouse
-    for event in pygame.event.get():
-      if event.type == pygame.QUIT:
-        sys.exit()
+
     #Setteamos el color de fondo
     pantalla.fill(confi.color)
+    #Hacemos aparecer la nave
+    nave.mostrarNave()
     #Hacer visible la pantalla más reciente
     pygame.display.flip()
-
 
 
 
