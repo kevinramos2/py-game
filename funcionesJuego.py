@@ -10,25 +10,25 @@ def verificarEventos(nave):
         sys.exit()
       #verificar si la tecla que se presionó es para mover a la derecha/izquierda, arriba/abajo
       elif event.type == pygame.KEYDOWN:
-         if event.key == pygame.K_RIGHT:
-            nave.movimientoDerecha = True
-         elif event.key == pygame.K_LEFT:
-            nave.movimientoIzquierda = True
-         elif event.key == pygame.K_UP:
-            nave.moviemientoArriba = True
-         elif event.key == pygame.K_DOWN:
-            nave.moviemientoAbajo = True
+         verificarEventosKeyD(event, nave)
       elif event.type == pygame.KEYUP:
-         if event.key == pygame.K_RIGHT:
-            nave.movimientoDerecha = False
-         elif event.key == pygame.K_LEFT:
-            nave.movimientoIzquierda = False
-         elif event.key == pygame.K_UP:
-            nave.moviemientoArriba = False
-         elif event.key == pygame.K_DOWN:
-            nave.moviemientoAbajo = False
+         verificarEventosKeyU(event, nave)
 
-        
+#Responde a los eventos por teclado/KeyDown
+def verificarEventosKeyD(event,nave):
+   if event.key == pygame.K_RIGHT:
+      nave.movimientoDerecha = True
+   elif event.key == pygame.K_LEFT:
+      nave.movimientoIzquierda = True
+
+#Responde a los eventos por teclado/KeyUp
+def verificarEventosKeyU(event,nave):
+   if event.key == pygame.K_RIGHT:
+      nave.movimientoDerecha = False
+   elif event.key == pygame.K_LEFT:
+      nave.movimientoIzquierda = False
+
+
 #actualiza las imagenes en pantalla
 def actualizarPantalla(confi,pantalla,nave):
        #Setteamos el color de fondo
