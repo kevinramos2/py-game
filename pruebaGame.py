@@ -19,7 +19,7 @@ def iniciarJuego():
   pygame.display.set_caption("Invasión alienígena")
 
   #Crea la nave
-  nave = Nave(pantalla)
+  nave = Nave(pantalla, confi)
 
   #bucle principal de animación del juego
   while True:
