@@ -28,7 +28,6 @@ def verificarEventosKeyU(event,nave):
    elif event.key == pygame.K_LEFT:
       nave.movimientoIzquierda = False
 
-
 #actualiza las imagenes en pantalla
 def actualizarPantalla(confi,pantalla,nave):
        #Setteamos el color de fondo
