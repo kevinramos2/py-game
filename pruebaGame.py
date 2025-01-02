@@ -1,11 +1,11 @@
 #Curso de udemy jasjas
 # Invasión alienígena
 
-#Importar la libreria pygame y sys(para salir del juego)
+#Importar la libreria pygame
 import pygame
-import sys 
 from configuraciones import Configuraciones
 from nave import Nave
+import funcionesJuego as fj
 
 #Etapa 1 - Creación de la nave, se podrá mover derecha/izquierda y también debéra poder disparar
 
@@ -21,10 +21,10 @@ def iniciarJuego():
   #Crea la nave
   nave = Nave(pantalla)
 
-
   #bucle principal de animación del juego
   while True:
-
+    #Escuchar las entradas por teclado/mouse
+    fj.verificarEventos()
     #Setteamos el color de fondo
     pantalla.fill(confi.color)
     #Hacemos aparecer la nave
